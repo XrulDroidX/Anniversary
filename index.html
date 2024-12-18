@@ -15,29 +15,22 @@
   <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
   <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
 
-  <title>Happy Anniversary</title>
+  <title>Script HTML buat Kamu</title>
 </head>
 <body>
+	
+   <!-- Audio diambil dari jalur relatif -->
+   <audio src="./audio.mp3" id="linkmp3" class="sembunyi"></audio>
+   
    <div id="bodyblur">
-     <!-- Wallpaper -->
-     <img src="./wallpaper.jpg" id="wallpaper" alt="Wallpaper"/>
+     <!-- Wallpaper diambil dari jalur relatif -->
+     <img src="./wallpaper.jpg" id="wallpaper"/>
      <div id="beneranblur"></div>
    </div>
    
    <div id='Content'>
-     <h1>Happy Anniversary!</h1>
-     <p>Ini lagu spesial untuk kita:</p>
+     <!-- Konten lainnya tetap sama -->
    </div>
-
-   <!-- Audio YouTube -->
-   <iframe 
-     src="https://www.youtube.com/embed/GMwjDPyj3?autoplay=1&loop=1&playlist=GMwjDPyj3" 
-     width="0" 
-     height="0" 
-     frameborder="0"
-     allow="autoplay"
-     style="visibility: hidden; position: absolute;">
-   </iframe>
 
 <script>
   const body = document.querySelector("body"); 
@@ -49,7 +42,10 @@
   const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
   today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy; 
   inikuis=0;ftganti=0;flag=1;flagg=1;fungsi=0;ftfungsi=0;fungsiAwal=0;fungsitimer=0;
-  Content.style = "opacity:1;margin-top:16vh;";
+  vketikhalo=halo.innerHTML;halo.innerHTML = "";
+  vketikhalo2=halo2.innerHTML;halo2.innerHTML = "";
+  pesanwhatsapp = pesanWA.innerHTML;deffotostiker=fotostiker.src;Content.style = "opacity:1;margin-top:16vh;";
+  audio = new Audio('' + linkmp3.src);tanggal.innerHTML="- " + today + " -"; 
   function createHeart() {
       const heart = document.createElement("div");
       heart.className = "fas fa-heart";
